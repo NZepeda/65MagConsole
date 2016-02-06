@@ -1,0 +1,53 @@
+<div class='row header'>
+	<div class="col-md-12">
+		<h1> Add A New Business</h1>
+	</div>
+</div>
+
+<div class="row">
+	<div class='col-md-2'></div>
+	<div class='col-md-8' id='addNewView'>
+
+		<div class='input-group infoInput'>
+			<span class="input-group-addon">Name</span>
+			<input type="text" class='form-control' ng-model='name'>
+		</div>
+
+		<div class="row gapRow"></div>
+
+		<div class='input-group infoInput'>
+			<span class="input-group-addon">Phone</span>
+			<input type="text" class='form-control' ng-model='phone' placeholder="xxxxxxx">
+		</div>
+
+		<div class="row gapRow"></div>
+
+		<div class='input-group infoInput'>
+			<span class="input-group-addon">Address</span>
+			<input type="text" class='form-control' ng-model='address'>
+		</div>
+
+		<div class="row gapRow"></div>
+
+		<div class='form-group infoInput'>
+  			<label>Description</label>
+  			<textarea class="form-control" rows="5" ng-model='description'></textarea>
+		</div>	
+
+	</div>
+	<div class='col-md-2'></div>
+
+</div>
+
+<div class='row gapRow'></div>
+
+
+<!-- Button Row -->
+<div class="row">
+	<div class='col-md-2'></div>
+	<div class='col-md-8'>
+		<button class='btn btn-success btn-block' ng-click='saveBusiness()'>Add New Business +</button>
+	</div>
+	<div class='col-md-2'></div>
+
+</div>

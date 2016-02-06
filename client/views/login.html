@@ -1,0 +1,65 @@
+<h1 class="header">Welcome to the 65 Mag App Console!</h1>
+
+		<div class="row">
+			
+			<div class="col-md-3"></div>
+			<div class="col-md-6" id="loginView">
+
+				<div class= "row header">
+					<h3> Please log in </h3>
+				</div>
+
+				<div class="alert alert-danger" ng-show = "loginFail == true">
+					Username or password was incorrect
+				</div>
+
+				<form ng-submit="logIn()">
+
+					<!--start username row -->
+					<div class="row usernameRow">
+						<div class="col-md-3"></div>
+						<div class="col-md-6">
+							<div class="input-group">
+								<span class="input-group-addon" id="basic-addon1">
+									<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+								</span>
+								<input type="text" class="form-control"  ng-model ="username" placeholder="Username" id="username">
+							</div>
+						</div>
+						<div class="col-md-3"></div>
+					</div>
+					<!-- end username row -->
+				</br>
+					<!--start password row -->
+					<div class="row"> 
+						<div class="col-md-3"></div>
+						<div class="col-md-6">
+							<div class="input-group">
+								<span class="input-group-addon" id="basic-addon2">
+									<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+								</span>
+								<input type="password" class="form-control" ng-model="userpassword" placeholder="Password" id="password">
+							</div> <!--end input group -->
+						</div> <!-- end main column -->
+						<div class="col-md-3"></div>
+					</div>
+					<!-- end password row -->
+
+				</br>
+					<!--start button row -->
+					<div class="row">
+						<div class="col-md-4"></div>
+						<!--Main div for button -->
+						<div class="col-md-4">
+							<button type="submit" class="btn btn-primary btn-block" id="loginButton">Log In</button>
+						</div>
+						<div class="col-md-4"></div>
+					</div>
+					<!-- end button row -->
+			</form>
+					
+			</div>
+			<div class="col-md-3"></div>
+
+			
+		</div> <!-- end main row -->

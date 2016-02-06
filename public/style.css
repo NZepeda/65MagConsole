@@ -1,0 +1,47 @@
+body{
+	background-color: #d3d3d3;
+}
+
+.header{
+	text-align: center;
+}
+
+
+#loginView{
+	background-color: white;
+	border-radius: 25px;
+	height: 300px;
+	padding-top: 15px;
+}
+
+#addNewView{
+	background-color: white;
+	border-radius: 25px;
+	height: 350px;
+	padding-top: 15px;
+}
+
+
+.usernameRow{
+	padding-top: 15px;
+}
+
+#loginButton{
+	text-align: center;
+}
+
+.tableRows td{
+	font-size: 0.9em;
+}
+
+.gapRow{
+	height: 25px;
+}
+
+.tableHeader{
+	text-align: center;
+}
+
+.infoInput{
+	border-bottom: 15px;
+}
