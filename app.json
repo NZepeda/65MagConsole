@@ -1,0 +1,7 @@
+{
+	"name":"The 65Mag App Console",
+	"description":"A web application to manage the content of the 65Mag app",
+	"respository":"https://github.com/NZepeda/65MagConsole",
+	"logo":"",
+	"keywords": ["node", "app"]
+}

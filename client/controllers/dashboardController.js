@@ -8,11 +8,12 @@ app.controller("dashboardController", ['$scope', '$resource', '$location', funct
 	$scope.businessArray = [];
 	$scope.editingData = {};
 
-	var BusinessObject = function(name, phone, address, description, id){
+	var BusinessObject = function(name, phone, address, description, website, id){
 		this.name = name;
 		this.phone = phone;
 		this.address = address;
 		this.description = description;
+		this.website = website;
 		this.id = id;
 	};
 	//get the businesses from parse
@@ -32,7 +33,6 @@ app.controller("dashboardController", ['$scope', '$resource', '$location', funct
 
 		var Business = Parse.Object.extend("Business");
 		var query = new Parse.Query(Business);
-		query.select("name", "phone", 'address', 'description');
 		query.find({
 			success: function(results){
 				console.log("Successfully retrieved " + results.length + " businesses.");
@@ -41,7 +41,7 @@ app.controller("dashboardController", ['$scope', '$resource', '$location', funct
 				//Make the results equal to the business array.
 				for(var i = 0; i < results.length; i++){
 
-					var business = new BusinessObject(results[i].attributes.name, results[i].attributes.phone, results[i].attributes.address, results[i].attributes.description, results[i]._objCount);
+					var business = new BusinessObject(results[i].attributes.name, results[i].attributes.phone, results[i].attributes.address, results[i].attributes.description, results[i].attributes.webURL, results[i]._objCount);
 
 					$scope.businessArray.push(business);
 
@@ -96,6 +96,7 @@ app.controller("dashboardController", ['$scope', '$resource', '$location', funct
 			objectToUpdate.set("phone", tableData.phone);
 			objectToUpdate.set('address', tableData.address);
 			objectToUpdate.set("description", tableData.description);
+			objectToUpdate.set("webURL", tableData.description);
 
 			objectToUpdate.save(null, {
 				success: function(){

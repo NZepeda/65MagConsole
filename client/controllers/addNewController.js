@@ -4,6 +4,7 @@ app.controller('addNewController', ['$scope','$location', function($scope, $loca
 	$scope.phone = "";
 	$scope.address = "";
 	$scope.description = "";
+	$scope.website = "";
 	$scope.didSucceed = false;
 
 	$scope.saveBusiness = function(){
@@ -18,6 +19,7 @@ app.controller('addNewController', ['$scope','$location', function($scope, $loca
 			business.set('address', $scope.address);
 			business.set('phone', $scope.phone);
 			business.set('description', $scope.description);
+			business.set('webURL', $scope.website);
 
 			business.save(null, {
 				success: function(){
@@ -40,6 +42,10 @@ app.controller('addNewController', ['$scope','$location', function($scope, $loca
 		}
 
 	});
+
+	$scope.goToDashboard = function(){
+		$location.url('/dashboard');
+	}
 
 
 }]);
